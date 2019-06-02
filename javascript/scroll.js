@@ -36,6 +36,7 @@ var aboutFontSize = aboutStyle.fontSize;
 var aboutHeight = aboutStyle.height;
 var closerHeight = closerStyle.height;
 var paragraphsHeight = paragraphStyle.height;
+var copyrightHeight = paragraphStyle.height;
 var linksHeight = linksStyle.height;
 var mainContentHeight = mainContentStyle.height;
 
@@ -52,6 +53,7 @@ var aboutFontSizeValue = aboutFontSize.slice(0, -2);
 var aboutHeightValue = aboutHeight.slice(0, -2);
 var closerHeightValue = closerHeight.slice(0, -2);
 var paragraphsHeightValue = paragraphsHeight.slice(0, -2);
+var copyrightHeightValue = copyrightHeight.slice(0, -2);
 var linksHeightValue = linksHeight.slice(0, -2);
 var mainContentHeightValue = mainContentHeight.slice(0, -2);
 
@@ -102,7 +104,7 @@ else {
   links.style.bottom = "40px";
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
-  bImage.style.height = mainContentHeightValue*0.75 + "px";
+  bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
 }
 
 
@@ -129,6 +131,7 @@ $(window).on("scroll resize", function(){
   var closerStyle = getComputedStyle(closer);
   var linksStyle = getComputedStyle(links);
   var mainContentStyle = getComputedStyle(mainContent);
+  var copyrightStyle = getComputedStyle(copyright);
 
   var imageWidth = imageStyle.width;
   var headerWidth = headerStyle.width;
@@ -142,6 +145,7 @@ $(window).on("scroll resize", function(){
   var closerHeight = closerStyle.height;
   var linksHeight = linksStyle.height;
   var mainContentHeight = mainContent.height;
+  var copyrightHeight = copyrightStyle.height;
 
   var imageWidthValue = imageWidth.slice(0, -2);
   var imageMarginValue = imageMargin.slice(0, -2);
@@ -155,6 +159,8 @@ $(window).on("scroll resize", function(){
   var closerHeightValue = closerHeight.slice(0, -2);
   var linksHeightValue = linksHeight.slice(0, -2);
   var mainContentHeightValue = mainContentHeight.slice(0, -2);
+  var copyrightHeightValue = copyrightHeight.slice(0, -2);
+
   var aboutArea = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue)*($(window).height() - headerHeightValue - aboutMarginTopValue - aboutMarginBottomValue - closerHeightValue);
 
   fade.style.width =  (imageWidthValue*1.2) + "px";
@@ -200,7 +206,7 @@ else{
   links.style.bottom = "40px";
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
-  bImage.style.height = mainContentHeightValue*0.75 + "px";
+  bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
 }
 
   });
