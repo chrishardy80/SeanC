@@ -11,6 +11,7 @@ var closer = document.querySelector("#closer");
 var paragraphs = document.querySelector(".mainparagraphs")
 var copyright = document.querySelector("#copyright");
 var links = document.querySelector("#links");
+var mainContent = document.querySelector("#maincontent");
 
 var imageStyle = getComputedStyle(bImage);
 var headerStyle = getComputedStyle(vHeader);
@@ -19,7 +20,8 @@ var aboutStyle = getComputedStyle(about);
 var closerStyle = getComputedStyle(closer);
 var paragraphStyle = getComputedStyle(paragraphs);
 var copyrightStyle = getComputedStyle(copyright);
-var linksStyle = getComputedStyle(links)
+var linksStyle = getComputedStyle(links);
+var mainContentStyle = getComputedStyle(mainContent);
 
 var imageWidth = imageStyle.width;
 var headerWidth = headerStyle.width;
@@ -35,6 +37,7 @@ var aboutHeight = aboutStyle.height;
 var closerHeight = closerStyle.height;
 var paragraphsHeight = paragraphStyle.height;
 var linksHeight = linksStyle.height;
+var mainContentHeight = mainContentStyle.height;
 
 var imageWidthValue = imageWidth.slice(0, -2);
 var imageMarginValue = imageMargin.slice(0, -2);
@@ -50,6 +53,7 @@ var aboutHeightValue = aboutHeight.slice(0, -2);
 var closerHeightValue = closerHeight.slice(0, -2);
 var paragraphsHeightValue = paragraphsHeight.slice(0, -2);
 var linksHeightValue = linksHeight.slice(0, -2);
+var mainContentHeightValue = mainContentHeight.slice(0, -2);
 
 if($(window).width()>990)
 {
@@ -90,6 +94,15 @@ else
 
 });
 }
+else {
+  about.style.width = 45 + "%";
+  title.style.fontSize = "180px";
+  title.style.width = 100 + "%";
+  links.style.position = "fixed";
+  links.style.bottom = "40px";
+  links.style.height = "380px";
+  bImage.style.height = mainContentHeightValue*0.75 + "px";
+}
 
 
 
@@ -113,7 +126,8 @@ $(window).on("scroll resize", function(){
   var titleStyle = getComputedStyle(title);
   var aboutStyle = getComputedStyle(about);
   var closerStyle = getComputedStyle(closer);
-  var linksStyle = getComputedStyle(links)
+  var linksStyle = getComputedStyle(links);
+  var mainContentStyle = getComputedStyle(mainContent);
 
   var imageWidth = imageStyle.width;
   var headerWidth = headerStyle.width;
@@ -126,6 +140,7 @@ $(window).on("scroll resize", function(){
   var aboutMarginBottom = aboutStyle.marginBottom;
   var closerHeight = closerStyle.height;
   var linksHeight = linksStyle.height;
+  var mainContentHeight = mainContent.height;
 
   var imageWidthValue = imageWidth.slice(0, -2);
   var imageMarginValue = imageMargin.slice(0, -2);
@@ -138,6 +153,7 @@ $(window).on("scroll resize", function(){
   var aboutMarginBottomValue = aboutMarginBottom.slice(0, -2);
   var closerHeightValue = closerHeight.slice(0, -2);
   var linksHeightValue = linksHeight.slice(0, -2);
+  var mainContentHeightValue = mainContentHeight.slice(0, -2);
   var aboutArea = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue)*($(window).height() - headerHeightValue - aboutMarginTopValue - aboutMarginBottomValue - closerHeightValue);
 
   fade.style.width =  (imageWidthValue*1.2) + "px";
@@ -182,6 +198,7 @@ else{
   links.style.position = "fixed";
   links.style.bottom = "40px";
   links.style.height = "380px";
+  bImage.style.height = mainContentHeightValue*0.75 + "px";
 }
 
   });
