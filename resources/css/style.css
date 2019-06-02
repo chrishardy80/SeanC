@@ -1,0 +1,386 @@
+@font-face {
+    font-family: 'Old London';
+    src: url('../fonts/OldLondon.woff2') format('woff2'),
+        url('../fonts/OldLondon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JMH Typewriter';
+    src: url('../fonts/JMHTypewriter-Regular.woff2') format('woff2'),
+        url('../fonts/JMHTypewriter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+
+}
+#content {
+  height: 100vh;
+  width: 102vw;
+  color: #27394d;
+  background-color: #efeae7;
+
+}
+
+.imagecontainer {
+  max-width: 100%;
+  height: 100%;
+}
+
+#backgroundimage {
+  position: fixed;
+  height: 100vh;
+  margin-right: 7vw;
+  right: 0;
+  bottom: 0;
+}
+
+#maincontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+
+
+#title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Old London';
+  font-size: 100px;
+  color: white;
+  padding: 20px 0 20px 7vw;
+  line-height: 1;
+  background-color: black;
+  height: 100px;
+}
+
+#fade {
+  display: flex;
+}
+
+#fade1 {
+  width: 40%;
+  height: 140px;
+  background-image: linear-gradient(to right, black, #efeae7);
+}
+
+#fade2 {
+  width: 60%;
+  height: 140px;
+  background-image: linear-gradient(to left, black, #efeae7);
+}
+
+#filler{
+  width: 10%;
+  height: 140px;
+  background-color: black;
+}
+
+
+
+#links .imagecontainer {
+  display: flex;
+  margin-right: 30px;
+  padding: 5px;
+
+}
+
+.paragraphs {
+  display: none;
+}
+
+#arrows {
+  display: none;
+}
+
+#casarotto {
+  background-color: white;
+}
+
+#wme {
+  background-color: black;
+  border: 1px solid white;
+}
+
+img {
+  height:100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 0 7vw;
+  width: 60vw;
+  font-family: 'JMH Typewriter', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#closer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+
+#links {
+  display: flex;
+  margin: 0 0 6vh 7vw;
+  height: 70px;
+
+
+}
+
+#copyright {
+width:250px;
+text-align: right;
+margin-bottom: 4vh;
+
+}
+
+
+
+/*@media only screen and (max-width: 1090px) {
+  #about {
+    font-size: 18px;
+    width: 55vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #about {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 964px) {
+  #title {
+
+    font-size: 90px;
+  }
+}
+
+
+
+@media only screen and (max-height: 750px) {
+
+
+  #about {
+    margin-top: 50px;
+  }
+
+  #links {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #about {
+    margin-top: 40px;
+    width: 45vw;
+  }
+
+
+}
+
+@media only screen and (max-height: 615px) {
+  #about {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-height: 580px) {
+  #about {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-height: 540px) {
+  #title {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-height: 512px) {
+  #about {
+    margin-top: 10px;
+  }
+}*/
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    #content {
+      height: 100vh;
+    }
+
+    #maincontent {
+
+    }
+
+    header {
+      height: 250px;
+      width: 100%;
+      background-color: black;
+    }
+
+    #fade,
+    #filler {
+      display: none;
+    }
+
+
+
+    #title {
+      font-size: 180px;
+      height: 200px;
+      width: 100vh;
+      background-color: black;
+      color: white;
+      justify-content: center;
+      padding: 20px 0 20px 0;
+    }
+
+    #links .imagecontainer {
+      display: flex;
+      width:150px;
+      height: 150px;
+      margin-right: 50px;
+    }
+
+    #links {
+      position: fixed;
+      bottom: 40px;
+      max-width: 100%;
+      height: 380px;
+      padding: 50px 0 0 30px;
+      margin: 0;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+
+
+    #backgroundimage {
+      margin-bottom: 200px;
+      height: 80vh;
+      margin-right: 20px;
+    }
+
+    #about {
+      width:45%;
+      align-items: flex-start;
+      margin-left: 30px;
+      margin-top: 90px;
+      height: 100vh;
+
+    }
+
+    .mainparagraphs {
+      display: none;
+    }
+
+    .One,
+    .Two {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      height: 100%;
+    }
+
+    .paragraphOne {
+      width: 100%;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .paragraphTwo {
+      width: 65%;
+      font-size: 29px;
+    }
+
+    .paragraphThree {
+      width: 90%;
+      font-size: 29px;
+    }
+
+    .paragraphFour {
+      width: 65%;
+      font-size: 29px;
+    }
+
+    #copyright {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      background-color: black;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    #arrows {
+
+      display: flex;
+      position: fixed;
+
+      font-size: 120px;
+
+      width: 65%;
+      justify-content: space-between;
+
+
+    }
+
+    .rightarrow {
+      right: 150px;
+      top: 380px;
+      position: fixed;
+      opacity: 0;
+    }
+
+    .leftarrow {
+      right: 80px;
+      top: 380px;
+      position: fixed;
+      opacity: 0;
+    }
+
+    .paragraphs {
+
+    }
+
+    #closer {
+      position: fixed;
+    }
+
+
+
+}
