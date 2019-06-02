@@ -101,6 +101,7 @@ else {
   links.style.position = "fixed";
   links.style.bottom = "40px";
   links.style.height = "380px";
+  mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
   bImage.style.height = mainContentHeightValue*0.75 + "px";
 }
 
@@ -198,6 +199,7 @@ else{
   links.style.position = "fixed";
   links.style.bottom = "40px";
   links.style.height = "380px";
+  mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
   bImage.style.height = mainContentHeightValue*0.75 + "px";
 }
 
