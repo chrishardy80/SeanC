@@ -36,7 +36,7 @@ var aboutFontSize = aboutStyle.fontSize;
 var aboutHeight = aboutStyle.height;
 var closerHeight = closerStyle.height;
 var paragraphsHeight = paragraphStyle.height;
-var copyrightHeight = paragraphStyle.height;
+var copyrightHeight = copyrightStyle.height;
 var linksHeight = linksStyle.height;
 var mainContentHeight = mainContentStyle.height;
 
@@ -105,6 +105,8 @@ else {
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
+  bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
+  console.log(copyrightHeightValue + "px");
 }
 
 
@@ -144,7 +146,7 @@ $(window).on("scroll resize", function(){
   var aboutMarginBottom = aboutStyle.marginBottom;
   var closerHeight = closerStyle.height;
   var linksHeight = linksStyle.height;
-  var mainContentHeight = mainContent.height;
+  var mainContentHeight = mainContentStyle.height;
   var copyrightHeight = copyrightStyle.height;
 
   var imageWidthValue = imageWidth.slice(0, -2);
@@ -207,6 +209,8 @@ else{
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
+  bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
+  console.log(($(window).height() - headerHeightValue - copyrightHeightValue) + "px");
 }
 
   });
