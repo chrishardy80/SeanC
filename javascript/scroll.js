@@ -101,7 +101,7 @@ else {
   title.style.fontSize = "180px";
   title.style.width = 100 + "%";
   links.style.position = "fixed";
-  links.style.bottom = "40px";
+  links.style.bottom = "20px";
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
@@ -114,18 +114,17 @@ else {
 
 
   function inViewport($el) {
-    var elH = $el.outerHeight(),
-        H   = $(window).height(),
-        r   = $el[0].getBoundingClientRect(), t=r.top, b=r.bottom;
-    return Math.max(0, t>0? Math.min(elH, H-t) : Math.min(b, H));
+    var elW = $el.outerWidth(),
+        W   = $(window).width(),
+        r   = $el[0].getBoundingClientRect(), l=r.left, r=r.right;
+    return Math.max(0, l>0? Math.min(elW, W-l) : Math.min(r, W));
 
   }
 
 
 
 $(window).on("scroll resize", function(){
-  if($(window).width()>990)
-  {
+
   var imageStyle = getComputedStyle(bImage);
   var headerStyle = getComputedStyle(vHeader);
   var titleStyle = getComputedStyle(title);
@@ -165,6 +164,8 @@ $(window).on("scroll resize", function(){
 
   var aboutArea = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue)*($(window).height() - headerHeightValue - aboutMarginTopValue - aboutMarginBottomValue - closerHeightValue);
 
+    if(inViewport($("#maincontent"))>990)
+  {
   fade.style.width =  (imageWidthValue*1.2) + "px";
   filler.style.width = imageMargin;
   title.style.width = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue) + "px" ;
@@ -210,8 +211,9 @@ else{
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
   bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
-  console.log(($(window).height() - headerHeightValue - copyrightHeightValue) + "px");
+  console.log($(window).height() - headerHeightValue - copyrightHeightValue);
 }
+
 
   });
 
