@@ -290,11 +290,11 @@ margin-bottom: 4vh;
     }
 
     #about {
-      width:45%;
+      width:48%;
       align-items: flex-start;
       margin-left: 30px;
       margin-top: 90px;
-      height: 100vh;
+      height: 70vh;
 
     }
 
@@ -312,7 +312,7 @@ margin-bottom: 4vh;
     }
 
     .paragraphOne {
-      width: 100%;
+      width: 95%;
       font-size: 35px;
       font-weight: bold;
     }

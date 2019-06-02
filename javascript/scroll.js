@@ -97,13 +97,13 @@ else
 });
 }
 else {
-  about.style.width = 45 + "%";
+  about.style.width = 48 + "%";
   title.style.fontSize = "180px";
   title.style.width = 100 + "%";
   links.style.position = "fixed";
   links.style.bottom = "40px";
   links.style.height = "380px";
-  mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
+  mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
 }
 
@@ -199,13 +199,13 @@ links.style.width = 20 + "%";
 
 }
 else{
-  about.style.width = 45 + "%";
+  about.style.width = 48 + "%";
   title.style.fontSize = "180px";
   title.style.width = 100 + "%";
   links.style.position = "fixed";
   links.style.bottom = "40px";
   links.style.height = "380px";
-  mainContent.style.height = ($(window).height() - headerHeightValue) + "px";
+  mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
 }
 
