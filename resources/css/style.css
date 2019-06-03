@@ -272,9 +272,9 @@ margin-bottom: 4vh;
 
     #links {
       position: fixed;
-      
+
       max-width: 100%;
-      height: 380px;
+      
       padding: 50px 0 0 30px;
       margin: 0;
       display: flex;
@@ -287,6 +287,7 @@ margin-bottom: 4vh;
       margin-bottom: 200px;
       height: 80vh;
       margin-right: 20px;
+
     }
 
     #about {
