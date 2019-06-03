@@ -59,7 +59,7 @@ var mainContentHeightValue = mainContentHeight.slice(0, -2);
 
 if($(window).width()>990)
 {
- window.addEventListener('load', function() {
+ //window.addEventListener('load', function() {
 
 fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
 filler.style.width = imageMargin;
@@ -94,17 +94,17 @@ else
     title.style.fontSize = (titleWidthValue*0.175) + "px";
   }
 
-});
+//});
 }
 else {
   about.style.width = 48 + "%";
   title.style.fontSize = "180px";
   title.style.width = 100 + "%";
   links.style.position = "fixed";
-  links.style.bottom = "20px";
+
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
-  bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
+  bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue - 40) + "px";
   bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
   console.log(copyrightHeightValue + "px");
 }
@@ -206,7 +206,7 @@ else{
   title.style.fontSize = "180px";
   title.style.width = 100 + "%";
   links.style.position = "fixed";
-  links.style.bottom = "40px";
+
   links.style.height = "380px";
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue) + "px";
