@@ -232,8 +232,10 @@ margin-bottom: 4vh;
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2){
+
+
     #content {
-      height: 100vh;
+      max-height: 100vh;
     }
 
     #maincontent {
@@ -274,7 +276,7 @@ margin-bottom: 4vh;
       position: fixed;
 
       max-width: 100%;
-      
+
       padding: 50px 0 0 30px;
       margin: 0;
       display: flex;
