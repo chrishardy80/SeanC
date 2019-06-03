@@ -109,6 +109,7 @@ else {
   mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue-40) + "px";
   bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue - 20) + "px";
   bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
+  bImage.style.marginRight = "20px";
   console.log(copyrightHeightValue + "px");
 }
 
@@ -236,6 +237,7 @@ $(window).on("scroll resize", function(){
     mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue-40) + "px";
     bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue - 20) + "px";
     bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
+    bImage.style.marginRight = "20px";
     console.log(copyrightHeightValue + "px");
   }
 
