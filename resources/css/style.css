@@ -14,16 +14,15 @@
     font-style: normal;
 }
 
-body {
-
+#mobile {
+  display: none;
 }
-#content {
-  height: 100vh;
-  width: 102vw;
+
+body {
   color: #27394d;
   background-color: #efeae7;
-
 }
+
 
 .imagecontainer {
   max-width: 100%;
@@ -38,10 +37,12 @@ body {
   bottom: 0;
 }
 
-#maincontent {
+#desktop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
+  width: 102vw;
 }
 
 header {
@@ -101,13 +102,6 @@ p {
 
 }
 
-.paragraphs {
-  display: none;
-}
-
-#arrows {
-  display: none;
-}
 
 #casarotto {
   background-color: white;
@@ -115,7 +109,6 @@ p {
 
 #wme {
   background-color: black;
-  border: 1px solid white;
 }
 
 img {
@@ -131,7 +124,7 @@ img {
   justify-content: center;
   margin: 0 20px 0 7vw;
   width: 60vw;
-  font-family: 'JMH Typewriter', sans-serif;
+  font-family: 'Rokkitt', serif;
   font-size: 20px;
   line-height: 1.4;
 }
@@ -160,140 +153,86 @@ margin-bottom: 4vh;
 }
 
 
-
-/*@media only screen and (max-width: 1090px) {
-  #about {
-    font-size: 18px;
-    width: 55vw;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #about {
-    width: 50vw;
-  }
-}
-
-@media only screen and (max-width: 964px) {
-  #title {
-
-    font-size: 90px;
-  }
-}
-
-
-
-@media only screen and (max-height: 750px) {
-
-
-  #about {
-    margin-top: 50px;
-  }
-
-  #links {
-    margin-bottom: 50px;
-  }
-}
-
-@media only screen and (max-height: 650px) {
-  #about {
-    margin-top: 40px;
-    width: 45vw;
-  }
-
-
-}
-
-@media only screen and (max-height: 615px) {
-  #about {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-height: 580px) {
-  #about {
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (max-height: 540px) {
-  #title {
-    font-size: 80px;
-  }
-}
-
-@media only screen and (max-height: 512px) {
-  #about {
-    margin-top: 10px;
-  }
-}*/
-
 @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2){
 
-
-    #content {
-      max-height: 100vh;
+    #desktop {
+      display: none;
     }
 
-    #maincontent {
-
+    body, html {
+      display: flex;
+      width: 100vw !important;
     }
 
-    header {
-      height: 250px;
-      width: 100%;
-      background-color: black;
+    #mobile {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
     }
 
-    #fade,
-    #filler {
+    #backgroundimage {
       display: none;
     }
 
 
 
-    #title {
+    #mobilebackgroundimage {
+      position: fixed;
+      height: 79vh;
+      bottom: 0;
+      right: 15px;
+      margin-bottom: 7.4vh;
+    }
+
+
+
+    #mobiletitle {
+      display: flex;
       font-size: 180px;
+      font-family: 'Old London';
       height: 200px;
-      width: 100vh;
+      width: 100vw;
       background-color: black;
       color: white;
       justify-content: center;
       padding: 20px 0 20px 0;
     }
 
-    #links .imagecontainer {
+    #mobilelinks .imagecontainer {
       display: flex;
       width:150px;
       height: 150px;
-      margin-right: 50px;
+      margin: 0 30px 0 0;
+      justify-content: flex-start;
     }
 
-    #links {
-      position: fixed;
-
+    #mobilelinks {
       max-width: 100%;
-
-      padding: 50px 0 0 30px;
+      padding: 0 0 130px 30px;
       margin: 0;
       display: flex;
       justify-content: flex-start;
     }
 
 
-    #about {
+    #mobileabout {
+      display: flex;
       align-items: flex-start;
       margin-left: 30px;
       margin-top: 90px;
-      height: 70vh;
+      height: 100vh;
+      width: 41%;
+
 
     }
 
-    .mainparagraphs {
-      display: none;
+    .paragraphs {
+      font-family: 'Rokkitt', serif;
+      width: 100%;
     }
 
     .One,
@@ -307,34 +246,35 @@ margin-bottom: 4vh;
 
     .paragraphOne {
       width: 100%;
-      font-size: 35px;
+      font-size: 45px;
       font-weight: bold;
+      padding-bottom: 10px;
     }
 
     .paragraphTwo {
-      width: 75%;
-      font-size: 29px;
+      width: 72%;
+      font-size: 35px;
     }
 
     .paragraphThree {
-      width: 90%;
-      font-size: 29px;
+      width: 97%;
+      font-size: 35px;
     }
 
     .paragraphFour {
       width: 65%;
-      font-size: 29px;
+      font-size: 35px;
     }
 
-    #copyright {
-      position: fixed;
+    #mobilecopyright {
+
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 25px;
       bottom: 0;
       width: 100%;
-      height: 7vh;
+      height: 12vh;
       background-color: black;
       color: white;
       margin-bottom: 0;
@@ -355,25 +295,25 @@ margin-bottom: 4vh;
 
     .rightarrow {
       right: 150px;
-      top: 380px;
+      top: 350px;
       position: fixed;
       opacity: 0;
     }
 
     .leftarrow {
       right: 80px;
-      top: 380px;
+      top: 350px;
       position: fixed;
       opacity: 0;
     }
 
-    .paragraphs {
-
+    #casarotto {
+      padding: 0 5px 0 5px;
     }
 
-    #closer {
-      position: fixed;
-    }
+
+
+
 
 
 

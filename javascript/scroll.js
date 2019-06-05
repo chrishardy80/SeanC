@@ -11,7 +11,7 @@ var closer = document.querySelector("#closer");
 var paragraphs = document.querySelector(".mainparagraphs")
 var copyright = document.querySelector("#copyright");
 var links = document.querySelector("#links");
-var mainContent = document.querySelector("#maincontent");
+var desktop = document.querySelector("#desktop");
 
 var imageStyle = getComputedStyle(bImage);
 var headerStyle = getComputedStyle(vHeader);
@@ -22,7 +22,7 @@ var closerStyle = getComputedStyle(closer);
 var paragraphStyle = getComputedStyle(paragraphs);
 var copyrightStyle = getComputedStyle(copyright);
 var linksStyle = getComputedStyle(links);
-var mainContentStyle = getComputedStyle(mainContent);
+var desktopStyle = getComputedStyle(desktop);
 
 var imageWidth = imageStyle.width;
 var headerWidth = headerStyle.width;
@@ -40,7 +40,7 @@ var closerHeight = closerStyle.height;
 var paragraphsHeight = paragraphStyle.height;
 var copyrightHeight = copyrightStyle.height;
 var linksHeight = linksStyle.height;
-var mainContentHeight = mainContentStyle.height;
+var desktopHeight = desktopStyle.height;
 
 var imageWidthValue = imageWidth.slice(0, -2);
 var imageMarginValue = imageMargin.slice(0, -2);
@@ -58,10 +58,9 @@ var closerHeightValue = closerHeight.slice(0, -2);
 var paragraphsHeightValue = paragraphsHeight.slice(0, -2);
 var copyrightHeightValue = copyrightHeight.slice(0, -2);
 var linksHeightValue = linksHeight.slice(0, -2);
-var mainContentHeightValue = mainContentHeight.slice(0, -2);
+var desktopHeightValue = desktopHeight.slice(0, -2);
 
-if($(window).width()>990)
-{
+
  //window.addEventListener('load', function() {
 
 fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
@@ -98,20 +97,8 @@ else
   }
 
 //});
-}
-else {
-  about.style.width = 48 + "%";
-  title.style.fontSize = "180px";
-  title.style.width = 100 + "%";
-  links.style.position = "fixed";
-  links.style.bottom = parseFloat(copyrightHeightValue)*2 + "px";
-  about.style.marginTop = mainContentHeightValue - bImageHeightValue;
-  mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue-40) + "px";
-  bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue - 20) + "px";
-  bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
-  bImage.style.marginRight = "20px";
-  console.log(copyrightHeightValue + "px");
-}
+
+
 
 
 
@@ -139,7 +126,7 @@ $(window).on("scroll resize", function(){
   var paragraphs = document.querySelector(".mainparagraphs")
   var copyright = document.querySelector("#copyright");
   var links = document.querySelector("#links");
-  var mainContent = document.querySelector("#maincontent");
+  var desktop = document.querySelector("#desktop");
 
   var imageStyle = getComputedStyle(bImage);
   var headerStyle = getComputedStyle(vHeader);
@@ -150,7 +137,7 @@ $(window).on("scroll resize", function(){
   var paragraphStyle = getComputedStyle(paragraphs);
   var copyrightStyle = getComputedStyle(copyright);
   var linksStyle = getComputedStyle(links);
-  var mainContentStyle = getComputedStyle(mainContent);
+  var desktopStyle = getComputedStyle(desktop);
 
   var imageWidth = imageStyle.width;
   var headerWidth = headerStyle.width;
@@ -168,7 +155,7 @@ $(window).on("scroll resize", function(){
   var paragraphsHeight = paragraphStyle.height;
   var copyrightHeight = copyrightStyle.height;
   var linksHeight = linksStyle.height;
-  var mainContentHeight = mainContentStyle.height;
+  var desktopHeight = desktopStyle.height;
 
   var imageWidthValue = imageWidth.slice(0, -2);
   var imageMarginValue = imageMargin.slice(0, -2);
@@ -186,10 +173,9 @@ $(window).on("scroll resize", function(){
   var paragraphsHeightValue = paragraphsHeight.slice(0, -2);
   var copyrightHeightValue = copyrightHeight.slice(0, -2);
   var linksHeightValue = linksHeight.slice(0, -2);
-  var mainContentHeightValue = mainContentHeight.slice(0, -2);
+  var desktopHeightValue = desktopHeight.slice(0, -2);
 
-  if($(window).width()>990)
-  {
+
    //window.addEventListener('load', function() {
 
   fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
@@ -226,20 +212,8 @@ $(window).on("scroll resize", function(){
     }
 
   //});
-  }
-  else {
-    about.style.width = 48 + "%";
-    title.style.fontSize = "180px";
-    title.style.width = 100 + "%";
-    links.style.position = "fixed";
-    links.style.bottom = parseFloat(copyrightHeightValue)*2 + "px";
-    about.style.marginTop = mainContentHeightValue - bImageHeightValue;
-    mainContent.style.height = ($(window).height() - headerHeightValue-copyrightHeightValue-40) + "px";
-    bImage.style.height = ($(window).height() - headerHeightValue - copyrightHeightValue - 20) + "px";
-    bImage.style.marginBottom = parseFloat(copyrightHeightValue) + "px";
-    bImage.style.marginRight = "20px";
-    console.log(copyrightHeightValue + "px");
-  }
+
+
 
 
   });
