@@ -183,10 +183,10 @@ margin-bottom: 4vh;
 
     #mobilebackgroundimage {
       position: fixed;
-      height: 79vh;
+      height: 80%;
       bottom: 0;
       right: 8px;
-      margin-bottom: 32.563px;
+      margin-bottom: 45px;
     }
 
 
@@ -196,7 +196,7 @@ margin-bottom: 4vh;
       align-items: center;
       font-size: 70px;
       font-family: 'Old London';
-      height: 15vh;
+      height: 70px;
       width: 100vw;
       background-color: black;
       color: white;
@@ -214,11 +214,11 @@ margin-bottom: 4vh;
 
     #mobilelinks {
       max-width: 50%;
-      padding: 0 0 5px 10px;
+      padding: 5px 0 5px 10px;
       margin: 0;
       display: flex;
       justify-content: flex-start;
-      height: 100px;
+      height: 55px;
     }
 
 
@@ -226,8 +226,7 @@ margin-bottom: 4vh;
       display: flex;
       align-items: flex-start;
       margin-left: 12px;
-      margin-top: 40px;
-      height: 100vh;
+      margin-top: 20px;
       width: 41%;
 
 
@@ -270,7 +269,8 @@ margin-bottom: 4vh;
     }
 
     #mobilecopyright {
-
+      position: fixed;
+      bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -296,14 +296,14 @@ margin-bottom: 4vh;
 
     .rightarrow {
       right: 75px;
-      top: 140px;
+      top: 130px;
       position: fixed;
       opacity: 0;
     }
 
     .leftarrow {
       right: 0;
-      top: 140px;
+      top: 130px;
       position: fixed;
       opacity: 0;
     }
