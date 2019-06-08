@@ -183,10 +183,10 @@ margin-bottom: 4vh;
 
     #mobilebackgroundimage {
       position: fixed;
-      height: 80%;
+      height: 78%;
       bottom: 0;
       right: 8px;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
 
@@ -213,6 +213,8 @@ margin-bottom: 4vh;
     }
 
     #mobilelinks {
+      position: fixed;
+      bottom: 50px;
       max-width: 50%;
       padding: 5px 0 5px 10px;
       margin: 0;
@@ -226,8 +228,8 @@ margin-bottom: 4vh;
       display: flex;
       align-items: flex-start;
       margin-left: 12px;
-      margin-top: 20px;
-      width: 41%;
+      margin-top: 30px;
+      width: 43%;
 
 
     }
@@ -254,7 +256,7 @@ margin-bottom: 4vh;
     }
 
     .paragraphTwo {
-      width: 70%;
+      width: 68%;
       font-size: 14px;
     }
 
@@ -276,7 +278,7 @@ margin-bottom: 4vh;
       align-items: center;
       font-size: 15px;
       width: 100%;
-      height: 50px;
+      height: 40px;
       background-color: black;
       color: white;
       margin-bottom: 0;
