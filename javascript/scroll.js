@@ -66,22 +66,31 @@ var mobilemaincontent = document.querySelector("#mobilemaincontent");
 var mobilebackgroundimage = document.querySelector("#mobilebackgroundimage");
 var mobilecopyright = document.querySelector("#mobilecopyright");
 var mobileabout = document.querySelector("#mobileabout");
+var mobiletitle = document.querySelector("#mobiletitle");
+var rightarrow = document.querySelector(".rightarrow");
+var leftarrow = document.querySelector(".leftarrow");
 
 var mobilemaincontentStyle = getComputedStyle(mobilemaincontent);
 var mobilebackgroundimageStyle = getComputedStyle(mobilebackgroundimage);
 var mobilecopyrightStyle = getComputedStyle(mobilecopyright);
 var mobileaboutStyle = getComputedStyle(mobileabout);
+var mobiletitleStyle = getComputedStyle(mobiletitle);
 
 var mobilemaincontentHeight = mobilemaincontentStyle.height;
+var mobilemaincontentWidth = mobilemaincontentStyle.width;
 var mobilebackgroundimageHeight = mobilebackgroundimageStyle.height;
+var mobilebackgroundimageWidth = mobilebackgroundimageStyle.width;
 var mobilecopyrightHeight = mobilecopyrightStyle.height;
 var mobileaboutHeight = mobileaboutStyle.height;
+var mobiletitleHeight = mobiletitleStyle.height;
 
 var mobilemaincontentHeightValue = mobilemaincontentHeight.slice(0, -2);
+var mobilemaincontentWidthValue = mobilemaincontentWidth.slice(0, -2);
 var mobilebackgroundimageHeightValue = mobilebackgroundimageHeight.slice(0, -2);
+var mobilebackgroundimageWidthValue = mobilebackgroundimageWidth.slice(0, -2);
 var mobilecopyrightHeightValue = mobilecopyrightHeight.slice(0, -2);
 var mobileaboutHeightValue = mobileaboutHeight.slice(0, -2);
-
+var mobiletitleHeightValue = mobiletitleHeight.slice(0, -2);
 
 
 fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
@@ -120,8 +129,9 @@ else
 //mobile
 
 mobileabout.style.marginTop = (mobilemaincontentHeightValue - mobilecopyrightHeightValue - mobilebackgroundimageHeightValue + 20) + "px";
-
-
+mobileabout.style.width = (mobilemaincontentWidthValue - (mobilebackgroundimageWidthValue*0.75) - 24) + "px";
+rightarrow.style.top = (mobilemaincontentHeightValue - mobilecopyrightHeightValue - mobilebackgroundimageHeightValue + mobiletitleHeightValue + 20) + "px";
+leftarrow.style.top = (mobilemaincontentHeightValue - mobilecopyrightHeightValue - mobilebackgroundimageHeightValue + mobiletitleHeightValue + 20) + "px";
 
 
 

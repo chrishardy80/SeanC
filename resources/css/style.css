@@ -193,12 +193,11 @@ margin-bottom: 4vh;
       align-items: center;
       font-size: 70px;
       font-family: 'Old London';
-      height: 70px;
+      height: 110px;
       width: 100vw;
       background-color: black;
       color: white;
       justify-content: center;
-      padding: 10px 0 10px 0;
     }
 
     #mobilemaincontent {
@@ -269,7 +268,7 @@ margin-bottom: 4vh;
     }
 
     .paragraphFour {
-      width: 80%;
+      width: 78%;
       font-size: 14px;
     }
 
