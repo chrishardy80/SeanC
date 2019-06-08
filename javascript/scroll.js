@@ -60,8 +60,29 @@ var copyrightHeightValue = copyrightHeight.slice(0, -2);
 var linksHeightValue = linksHeight.slice(0, -2);
 var desktopHeightValue = desktopHeight.slice(0, -2);
 
+//mobile
 
- //window.addEventListener('load', function() {
+var mobilemaincontent = document.querySelector("#mobilemaincontent");
+var mobilebackgroundimage = document.querySelector("#mobilebackgroundimage");
+var mobilecopyright = document.querySelector("#mobilecopyright");
+var mobileabout = document.querySelector("#mobileabout");
+
+var mobilemaincontentStyle = getComputedStyle(mobilemaincontent);
+var mobilebackgroundimageStyle = getComputedStyle(mobilebackgroundimage);
+var mobilecopyrightStyle = getComputedStyle(mobilecopyright);
+var mobileaboutStyle = getComputedStyle(mobileabout);
+
+var mobilemaincontentHeight = mobilemaincontentStyle.height;
+var mobilebackgroundimageHeight = mobilebackgroundimageStyle.height;
+var mobilecopyrightHeight = mobilecopyrightStyle.height;
+var mobileaboutHeight = mobileaboutStyle.height;
+
+var mobilemaincontentHeightValue = mobilemaincontentHeight.slice(0, -2);
+var mobilebackgroundimageHeightValue = mobilebackgroundimageHeight.slice(0, -2);
+var mobilecopyrightHeightValue = mobilecopyrightHeight.slice(0, -2);
+var mobileaboutHeightValue = mobileaboutHeight.slice(0, -2);
+
+
 
 fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
 filler.style.width = imageMargin;
@@ -96,8 +117,9 @@ else
     title.style.fontSize = (titleWidthValue*0.175) + "px";
   }
 
-//});
+//mobile
 
+mobileabout.style.marginTop = (mobilemaincontentHeightValue - mobilecopyrightHeightValue - mobilebackgroundimageHeightValue + 20) + "px";
 
 
 

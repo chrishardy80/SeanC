@@ -201,6 +201,10 @@ margin-bottom: 4vh;
       padding: 10px 0 10px 0;
     }
 
+    #mobilemaincontent {
+      height: 100%;
+    }
+
     #mobilelinks .imagecontainer {
       display: flex;
       width: 55px;
