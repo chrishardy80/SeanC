@@ -133,7 +133,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
 }
 
 
@@ -141,8 +140,6 @@ img {
   display: flex;
   margin: 0 0 6vh 7vw;
   height: 70px;
-
-
 }
 
 #copyright {
@@ -183,7 +180,7 @@ margin-bottom: 4vh;
 
     #mobilebackgroundimage {
       position: fixed;
-      height: 78%;
+      height: 76%;
       bottom: 0;
       right: 8px;
       margin-bottom: 40px;
@@ -228,10 +225,8 @@ margin-bottom: 4vh;
       display: flex;
       align-items: flex-start;
       margin-left: 12px;
-      margin-top: 30px;
-      width: 43%;
-
-
+      margin-top: 39px;
+      width: 44%;
     }
 
     .paragraphs {
@@ -256,7 +251,7 @@ margin-bottom: 4vh;
     }
 
     .paragraphTwo {
-      width: 68%;
+      width: 69%;
       font-size: 14px;
     }
 
@@ -265,8 +260,12 @@ margin-bottom: 4vh;
       font-size: 14px;
     }
 
+    .paragraphThree p {
+      margin-bottom: 0;
+    }
+
     .paragraphFour {
-      width: 65%;
+      width: 80%;
       font-size: 14px;
     }
 
@@ -289,7 +288,6 @@ margin-bottom: 4vh;
       display: flex;
       position: fixed;
       font-size: 50px;
-
       width: 65%;
       justify-content: space-between;
 
