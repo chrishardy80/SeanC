@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+  if ($(window).height()<$(window).width()){
+    if($(window).width()<990) {
+      $("#about, #copyright").css("font-family", "Rokkitt");
+      $("#title").css({"font-size":"80px",
+                       "padding-left":"3vw"});
+      $("#about, #links").css("margin-left", "2vw");
+      $("#backgroundimage").css("margin-right", "2vw");
+      $("#links").css("margin-bottom", "10px");
+      $("#title, #fade, #filler, header").css("height","80px");
+      $("#copyright").css({"font-size":"12px",
+                           "margin-bottom":"0"});
+      $("#about").css("padding-bottom", "10px");
+    }
+    $("#desktop").show();
+    $("#backgroundimage").show();
+    $("#mobile").hide();
+    $("#mobilebackgroundimage").hide();
+  }
+  else {
+    $("#desktop").hide();
+    $("#backgroundimage").hide();
+    $("#mobile").show();
+    $("#mobilebackgroundimage").show();
+  }
 
 var fade = document.querySelector("#fade");
 var title = document.querySelector("#title");
@@ -93,15 +117,21 @@ var mobileaboutHeightValue = mobileaboutHeight.slice(0, -2);
 var mobiletitleHeightValue = mobiletitleHeight.slice(0, -2);
 
 
+
 fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
 filler.style.width = imageMargin;
 title.style.width = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue)) + "px" ;
+if ($(window).width()>990) {
 about.style.width = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue) + "px" ;
+}
+else {
+about.style.width = (headerWidthValue - titleMarginValue - (imageWidthValue*0.77) - imageMarginValue - aboutMarginValue) + "px" ;
+}
 links.style.height = ($(window).height()*0.0852) + "px";
 
 var aboutArea = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue) - parseFloat(aboutMarginValue))*($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue));
 copyright.style.marginRight = (parseFloat(imageWidthValue) + parseFloat(imageMarginValue) + 30) + "px";
-about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
+//about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
 if (aboutArea < 291800)
 {
   if (Math.floor(aboutArea*0.00007) > 14)
@@ -147,6 +177,19 @@ leftarrow.style.top = (mobilemaincontentHeightValue - mobilecopyrightHeightValue
 
 
 $(window).on("scroll resize", function(){
+
+  if ($(window).height()<$(window).width()){
+    $("#desktop").show();
+    $("#backgroundimage").show();
+    $("#mobile").hide();
+    $("#mobilebackgroundimage").hide();
+  }
+  else {
+    $("#desktop").hide();
+    $("#backgroundimage").hide();
+    $("#mobile").show();
+    $("#mobilebackgroundimage").show();
+  }
 
   var fade = document.querySelector("#fade");
   var title = document.querySelector("#title");
