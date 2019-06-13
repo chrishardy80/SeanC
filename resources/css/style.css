@@ -23,6 +23,12 @@ body {
   background-color: #efeae7;
 }
 
+#maincontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 
 .imagecontainer {
   max-width: 100%;

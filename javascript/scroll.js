@@ -3,7 +3,7 @@ $(document).ready(function() {
   if ($(window).height()<$(window).width()){
     if($(window).width()<990) {
       $("#about, #copyright").css("font-family", "Rokkitt");
-      $("#title").css({"font-size":"80px",
+      $("#title").css({"font-size":"60px",
                        "padding-left":"3vw"});
       $("#about, #links").css("margin-left", "2vw");
       $("#backgroundimage").css("margin-right", "2vw");
@@ -11,12 +11,31 @@ $(document).ready(function() {
       $("#title, #fade, #filler, header").css("height","80px");
       $("#copyright").css({"font-size":"12px",
                            "margin-bottom":"0"});
-      $("#about").css("padding-bottom", "10px");
+      $("#about").css({"padding-bottom":"10px",
+                       "font-size":"18px"});
+    }
+    else {
+      $("#about").css("font-family", "JMH Typewriter");
+      $("#title, #fade, #filler, header").css("height","16vh");
+      $("#title").css("padding-left", "7vw");
+      $("#about, #links").css("margin-left", "7vw");
+      $("#backgroundimage").css("margin-right", "7vw");
+      console.log($("#title").css("width").slice(0, -2));
+      if ($("#title").css("width").slice(0, -2)>500)
+        {
+
+          $("#title").css("font-size", "100px");
+        }
+      else
+        {
+          $("#title").css("font-size", ($("#title").css("width").slice(0, -2)*0.175)+"px");
+        }
     }
     $("#desktop").show();
     $("#backgroundimage").show();
     $("#mobile").hide();
     $("#mobilebackgroundimage").hide();
+    $("#fade").css("width", ($("#backgroundimage").css("width").slice(0, -2)*1.2)+"px");
   }
   else {
     $("#desktop").hide();
@@ -118,7 +137,7 @@ var mobiletitleHeightValue = mobiletitleHeight.slice(0, -2);
 
 
 
-fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
+
 filler.style.width = imageMargin;
 title.style.width = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue)) + "px" ;
 if ($(window).width()>990) {
@@ -131,7 +150,7 @@ links.style.height = ($(window).height()*0.0852) + "px";
 
 var aboutArea = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue) - parseFloat(aboutMarginValue))*($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue));
 copyright.style.marginRight = (parseFloat(imageWidthValue) + parseFloat(imageMarginValue) + 30) + "px";
-//about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
+about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
 if (aboutArea < 291800)
 {
   if (Math.floor(aboutArea*0.00007) > 14)
@@ -147,14 +166,7 @@ else
   about.style.fontSize = "20px";
 }
 
-if (titleWidthValue > 500)
-  {
-    title.style.fontSize = "100px";
-  }
-else
-  {
-    title.style.fontSize = (titleWidthValue*0.175) + "px";
-  }
+
 
 //mobile
 
@@ -181,7 +193,7 @@ $(window).on("scroll resize", function(){
   if ($(window).height()<$(window).width()){
     if($(window).width()<990) {
       $("#about, #copyright").css("font-family", "Rokkitt");
-      $("#title").css({"font-size":"80px",
+      $("#title").css({"font-size":"60px",
                        "padding-left":"3vw"});
       $("#about, #links").css("margin-left", "2vw");
       $("#backgroundimage").css("margin-right", "2vw");
@@ -190,6 +202,23 @@ $(window).on("scroll resize", function(){
       $("#copyright").css({"font-size":"12px",
                            "margin-bottom":"0"});
       $("#about").css("padding-bottom", "10px");
+    }
+    else {
+      $("#about").css("font-family", "JMH Typewriter");
+      $("#title, #fade, #filler, header").css("height","16vh");
+      $("#title").css("padding-left", "7vw");
+      $("#about, #links").css("margin-left", "7vw");
+      $("#backgroundimage").css("margin-right", "7vw");
+      console.log($("#title").css("width").slice(0, -2));
+      if ($("#title").css("width").slice(0, -2)>500)
+        {
+
+          $("#title").css("font-size", "100px");
+        }
+      else
+        {
+          $("#title").css("font-size", ($("#title").css("width").slice(0, -2)*0.175)+"px");
+        }
     }
     $("#desktop").show();
     $("#backgroundimage").show();
@@ -318,14 +347,7 @@ $(window).on("scroll resize", function(){
     about.style.fontSize = "20px";
   }
 
-  if (titleWidthValue > 500)
-    {
-      title.style.fontSize = "100px";
-    }
-  else
-    {
-      title.style.fontSize = (titleWidthValue*0.175) + "px";
-    }
+
 
     //mobile
 
