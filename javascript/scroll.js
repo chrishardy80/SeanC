@@ -179,6 +179,18 @@ leftarrow.style.top = (mobilemaincontentHeightValue - mobilecopyrightHeightValue
 $(window).on("scroll resize", function(){
 
   if ($(window).height()<$(window).width()){
+    if($(window).width()<990) {
+      $("#about, #copyright").css("font-family", "Rokkitt");
+      $("#title").css({"font-size":"80px",
+                       "padding-left":"3vw"});
+      $("#about, #links").css("margin-left", "2vw");
+      $("#backgroundimage").css("margin-right", "2vw");
+      $("#links").css("margin-bottom", "10px");
+      $("#title, #fade, #filler, header").css("height","80px");
+      $("#copyright").css({"font-size":"12px",
+                           "margin-bottom":"0"});
+      $("#about").css("padding-bottom", "10px");
+    }
     $("#desktop").show();
     $("#backgroundimage").show();
     $("#mobile").hide();
