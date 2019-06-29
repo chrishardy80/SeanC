@@ -1,6 +1,13 @@
 $(document).ready(function() {
 
   if ($(window).height()<$(window).width()){
+    $("#desktop").show();
+    $("#mobile").hide();
+
+
+    $("#backgroundimage").show();
+
+    $("#mobilebackgroundimage").hide();
     if($(window).width()<990) {
       $("#about, #copyright").css("font-family", "Rokkitt");
       $("#title").css({"font-size":"60px",
@@ -8,11 +15,13 @@ $(document).ready(function() {
       $("#about, #links").css("margin-left", "2vw");
       $("#backgroundimage").css("margin-right", "2vw");
       $("#links").css("margin-bottom", "10px");
-      $("#title, #fade, #filler, header").css("height","80px");
+      $("#title, #fade, #filler, header").css("height","70px");
       $("#copyright").css({"font-size":"12px",
                            "margin-bottom":"0"});
-      $("#about").css({"padding-bottom":"10px",
-                       "font-size":"18px"});
+      $("#about").css(
+                       "font-size","16px");
+      $("#links").css("height", "40px");
+      $("#aboutcontainer").css("width", $(window).width() - $("#backgroundimage").css("width").slice(0, -2) - ($("#backgroundimage").css("margin-right").slice(0, -2)*2) + "px");
     }
     else {
       $("#about").css("font-family", "JMH Typewriter");
@@ -20,7 +29,8 @@ $(document).ready(function() {
       $("#title").css("padding-left", "7vw");
       $("#about, #links").css("margin-left", "7vw");
       $("#backgroundimage").css("margin-right", "7vw");
-      console.log($("#title").css("width").slice(0, -2));
+      $("#links").css("height", "70px");
+      $("#aboutcontainer").css("width", $(window).width() - $("#backgroundimage").css("width").slice(0, -2) - ($("#backgroundimage").css("margin-right").slice(0, -2)*1.5) + "px");
       if ($("#title").css("width").slice(0, -2)>500)
         {
 
@@ -31,19 +41,33 @@ $(document).ready(function() {
           $("#title").css("font-size", ($("#title").css("width").slice(0, -2)*0.175)+"px");
         }
     }
-    $("#desktop").show();
-    $("#backgroundimage").show();
-    $("#mobile").hide();
-    $("#mobilebackgroundimage").hide();
+    $("#casarotto").css("width", $("#casarotto").css("height").slice(0, -2)*1.5 + "px");
+    $("#wme").css("width", $("#wme").css("height"));
     $("#fade").css("width", ($("#backgroundimage").css("width").slice(0, -2)*1.2)+"px");
+
+    console.log("value: "+$("#title").css("width"));
+    console.log(($("#title").css("padding-left").slice(0, -2))*2);
+    console.log($("#backgroundimage").css("width").slice(0, -2));
+    console.log($("#backgroundimage").css("margin-right").slice(0, -2));
   }
   else {
     $("#desktop").hide();
     $("#backgroundimage").hide();
     $("#mobile").show();
     $("#mobilebackgroundimage").show();
-  }
+    if(($(window).height()-$("#mobiletitle").css("height").slice(0, -2)-$("#mobilecopyright").css("height").slice(0, -2))/2.7> $(".One").css("height").slice(0, -2)) {
+      $(".Two").show();
+      $(".Two").css("width", "70%");
+      $("#arrows").hide();
 
+    }
+    else {
+     $(".Two").hide();
+     $("#arrows").show();
+     $(".Two").css("width", "100%");
+    }
+  }
+console.log(($(window).height()-$("#mobiletitle").css("height").slice(0, -2)-$("#mobilecopyright").css("height").slice(0, -2))/2);
 var fade = document.querySelector("#fade");
 var title = document.querySelector("#title");
 var filler = document.querySelector("#filler");
@@ -140,17 +164,16 @@ var mobiletitleHeightValue = mobiletitleHeight.slice(0, -2);
 
 filler.style.width = imageMargin;
 title.style.width = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue)) + "px" ;
-if ($(window).width()>990) {
-about.style.width = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue) + "px" ;
-}
-else {
-about.style.width = (headerWidthValue - titleMarginValue - (imageWidthValue*0.77) - imageMarginValue - aboutMarginValue) + "px" ;
-}
-links.style.height = ($(window).height()*0.0852) + "px";
+//if ($(window).width()>990) {
+//about.style.width = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue) + "px" ;
+//}
+//else {
+//about.style.width = (headerWidthValue - titleMarginValue - (imageWidthValue*0.77) - imageMarginValue - aboutMarginValue) + "px" ;
+//}
 
 var aboutArea = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue) - parseFloat(aboutMarginValue))*($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue));
 copyright.style.marginRight = (parseFloat(imageWidthValue) + parseFloat(imageMarginValue) + 30) + "px";
-about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
+//about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
 if (aboutArea < 291800)
 {
   if (Math.floor(aboutArea*0.00007) > 14)
@@ -191,6 +214,10 @@ leftarrow.style.top = (mobilemaincontentHeightValue - mobilecopyrightHeightValue
 $(window).on("scroll resize", function(){
 
   if ($(window).height()<$(window).width()){
+    $("#desktop").show();
+    $("#backgroundimage").show();
+    $("#mobile").hide();
+    $("#mobilebackgroundimage").hide();
     if($(window).width()<990) {
       $("#about, #copyright").css("font-family", "Rokkitt");
       $("#title").css({"font-size":"60px",
@@ -198,10 +225,13 @@ $(window).on("scroll resize", function(){
       $("#about, #links").css("margin-left", "2vw");
       $("#backgroundimage").css("margin-right", "2vw");
       $("#links").css("margin-bottom", "10px");
-      $("#title, #fade, #filler, header").css("height","80px");
+      $("#title, #fade, #filler, header").css("height","70px");
       $("#copyright").css({"font-size":"12px",
                            "margin-bottom":"0"});
-      $("#about").css("padding-bottom", "10px");
+      $("#about").css(
+                       "font-size","16px");
+      $("#links").css("height", "40px");
+      $("#aboutcontainer").css("width", $(window).width() - $("#backgroundimage").css("width").slice(0, -2) - ($("#backgroundimage").css("margin-right").slice(0, -2)*2) + "px");
     }
     else {
       $("#about").css("font-family", "JMH Typewriter");
@@ -209,7 +239,8 @@ $(window).on("scroll resize", function(){
       $("#title").css("padding-left", "7vw");
       $("#about, #links").css("margin-left", "7vw");
       $("#backgroundimage").css("margin-right", "7vw");
-      console.log($("#title").css("width").slice(0, -2));
+      $("#links").css("height", "70px");
+      $("#aboutcontainer").css("width", $(window).width() - $("#backgroundimage").css("width").slice(0, -2) - ($("#backgroundimage").css("margin-right").slice(0, -2)*1.5) + "px");
       if ($("#title").css("width").slice(0, -2)>500)
         {
 
@@ -220,16 +251,31 @@ $(window).on("scroll resize", function(){
           $("#title").css("font-size", ($("#title").css("width").slice(0, -2)*0.175)+"px");
         }
     }
-    $("#desktop").show();
-    $("#backgroundimage").show();
-    $("#mobile").hide();
-    $("#mobilebackgroundimage").hide();
+    $("#casarotto").css("width", $("#casarotto").css("height").slice(0, -2)*1.5 + "px");
+    $("#wme").css("width", $("#wme").css("height"));
+    $("#fade").css("width", ($("#backgroundimage").css("width").slice(0, -2)*1.2)+"px");
+
+    console.log("value: "+$("#title").css("width"));
+    console.log(($("#title").css("padding-left").slice(0, -2))*2);
+    console.log($("#backgroundimage").css("width").slice(0, -2));
+    console.log($("#backgroundimage").css("margin-right").slice(0, -2));
   }
   else {
     $("#desktop").hide();
     $("#backgroundimage").hide();
     $("#mobile").show();
     $("#mobilebackgroundimage").show();
+    if(($(window).height()-$("#mobiletitle").css("height").slice(0, -2)-$("#mobilecopyright").css("height").slice(0, -2))/2.7> $(".One").css("height").slice(0, -2)) {
+      $(".Two").show();
+      $(".Two").css("width", "70%");
+      $("#arrows").hide();
+
+    }
+    else {
+     $(".Two").hide();
+     $("#arrows").show();
+     $(".Two").css("width", "100%");
+    }
   }
 
   var fade = document.querySelector("#fade");
@@ -326,12 +372,12 @@ $(window).on("scroll resize", function(){
   fade.style.width =  (parseFloat(imageWidthValue)*1.2) + "px";
   filler.style.width = imageMargin;
   title.style.width = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue)) + "px" ;
-  about.style.width = (headerWidthValue - titleMarginValue - imageWidthValue - imageMarginValue - aboutMarginValue) + "px" ;
-  links.style.height = ($(window).height()*0.0852) + "px";
+
+
 
   var aboutArea = (parseFloat(headerWidthValue) - parseFloat(titleMarginValue) - parseFloat(imageWidthValue) - parseFloat(imageMarginValue) - parseFloat(aboutMarginValue))*($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue));
   copyright.style.marginRight = (parseFloat(imageWidthValue) + parseFloat(imageMarginValue) + 30) + "px";
-  about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
+  //about.style.height = ($(window).height() - parseFloat(headerHeightValue) - parseFloat(aboutMarginTopValue) - parseFloat(aboutMarginBottomValue) - parseFloat(closerHeightValue)) + "px";
   if (aboutArea < 291800)
   {
     if (Math.floor(aboutArea*0.00007) > 14)

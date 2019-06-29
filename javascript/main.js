@@ -1,5 +1,5 @@
 function main () {
- $(".Two").hide();
+ 
 
 
 anime({
